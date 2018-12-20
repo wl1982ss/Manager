@@ -16,7 +16,7 @@ LoginDialog::~LoginDialog()
 
 void LoginDialog::on_loginBtn_clicked()
 {
-    accept();
+
     //判断用户名和密码是否正确
     //如果错误则弹出警告对话框
     if(ui->usrLineEdit->text() == tr("admin") &&
@@ -28,10 +28,14 @@ void LoginDialog::on_loginBtn_clicked()
     {
         QMessageBox::warning(this, tr("Warning"), tr("user name or password error!"),
                              QMessageBox::Yes);
+        // 清空内容并定位光标
+        ui->usrLineEdit->clear();
+        ui->pwdLineEdit->clear();
+        ui->usrLineEdit->setFocus();
     }
 }
 
 void LoginDialog::on_exitBtn_clicked()
 {
-
+    this->close();
 }
