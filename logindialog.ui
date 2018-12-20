@@ -39,7 +39,7 @@
     <string>密码：</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="usrLineEdit">
+  <widget class="QLineEdit" name="userLineEdit">
    <property name="geometry">
     <rect>
      <x>110</x>
